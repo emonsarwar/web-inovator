@@ -1,4 +1,5 @@
-const { client, ObjectId } = require("../config/mongoDB");
+const { client, ObjectId, connectDB } = require("../config/mongoDB");
+const fakecourses = require("../utilities/data");
 const database = client.db("LearnUp");
 const courseCollection = database.collection("courses");
 
@@ -221,3 +222,4 @@ exports.deleteCourse = async (req, res, next) => {
     next(error);
   }
 };
+

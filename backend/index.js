@@ -19,6 +19,7 @@ dotenv.config();
 
 // for ssl commerze needy .env
 const SSLCommerzPayment = require("sslcommerz-lts");
+const fakecourses = require("./api/utilities/data");
 const store_id = process.env.STORE_ID;
 const store_passwd = process.env.STORE_PASS;
 const is_live = process.env.NODE_ENV === "development" ? false : true; //true for live, false for sandbox
@@ -208,6 +209,7 @@ app.post("/enroll", async (req, res) => {
     }
   });
 });
+
 
 // Root route
 app.get("/", (req, res) => {

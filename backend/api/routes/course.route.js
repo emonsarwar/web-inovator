@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { allCourse, availableCourse, updateCourse, deleteCourse, createCourse, updateCourseDetails } = require("../controllers/course.controller");
+const { allCourse, availableCourse, updateCourse, deleteCourse, createCourse, updateCourseDetails, seedCourses } = require("../controllers/course.controller");
 const { upload } = require("../middleware/imgVdoUpload");
 
 
